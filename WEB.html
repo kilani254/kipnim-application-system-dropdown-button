@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #f10956;
+  color: rgb(78, 10, 238);
+  padding: 25px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #5b07f7;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #dfaf1256;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(209, 14, 56);
+  padding: 13px 17px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: rgb(18, 216, 166);}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<h2>COUNTY GOVERNMENT  OF KIPNIM TENDERING SYSTEM</h2>
+<p>Click on the button below.</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">MINISTRIES IN THE COUNTY</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="roa.html">MINISTRY OF ROADS</a>
+    <a href="tourism.html">MINISTRY OF TOURISM</a>
+    <a href="water.html">MINISTY OF WATER AND FISHERIES</a>
+    <a href="trade.html">MINISTRY OF TRADE</a>
+     <a href="environment.html">MINISTRY OF ENVIRONMENT AND SANITATION</a>
+    <a href="service.html"> MINISTRY OF SERVICE</a>
+    <a href="health.html">MINISTRY OF HEALTH</a>
+    <a href="manage.html">MINISTRY OF MANAGEMENT</a>
+
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
